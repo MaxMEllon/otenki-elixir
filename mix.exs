@@ -14,12 +14,20 @@ defmodule Sample.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [
+      applications: [
+        :logger,
+        :httpotion,
+        :poison
+      ]
+    ]
   end
 
   defp deps do
     [
       {:dogma, "~> 0.1", only: :dev},
+      {:httpotion, "~> 3.0.0"},
+      {:poison, "~> 2.0"}
     ]
   end
 end
